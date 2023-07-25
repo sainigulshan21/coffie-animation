@@ -1,0 +1,134 @@
+:root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(to right, pink, blueviolet);
+}
+
+.cup {
+    position: relative;
+    height: 300px;
+    width: 280px;
+    /* background-color: rgb(180, 180, 180); */
+    background-image: url(https://i.etsystatic.com/32319705/c/2248/1787/374/76/il/f13832/3451724147/il_340x270.3451724147_fmcf.jpg);
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    z-index: 1;
+    top: 90px;
+    box-shadow:  inset -5px -15px 10px rgb(100, 95, 95);
+}
+
+.top {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgb(152, 158, 158);
+    border-radius: 45%;
+
+}
+
+
+.circle {
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 260px;
+    top: 5px;
+    left: 10px;
+    border-radius: 45%;
+    overflow: hidden;
+}
+
+.tea {
+    position: relative;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #c57e65, #e28462);
+    border-radius: 45%;
+}
+.plate{
+    position: absolute;
+    top: 67px;
+    right: 218vh;
+}
+
+.handle {
+    width: 160px;
+    height: 130px;
+    position: absolute;
+    border: 25px solid rgb(75, 71, 71);
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-radius: 100%;
+    right: -100px;
+    top: 30px;
+    transform: rotate(52deg);
+    
+
+}
+
+.plate::before {
+    content: " ";
+    position: absolute;
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(to left, #352929, #7e7c7c);
+    /* background-image: url(https://merriam-webster.com/assets/mw/images/article/art-wap-article-main/gray-background-7131-98db5e6ffc4972baa4087760291cbc3e@1x.jpg); */
+    background-size: cover;
+    border-radius: 55%;
+    left: 32vw;
+    top: 53vh;
+    /* box-shadow:inset  0px -5px -10px black; */
+}
+
+.vapour{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    position: 0 20px;
+
+}
+.vapour span{
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+    display: block;
+    margin: 0 2px 50px;
+    height: 120px;
+    min-width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    animation: animate 5s linear infinite ;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i)* -0.5s);
+
+}
+@keyframes animate {
+0%{
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+}
+15%{
+    opacity: 1;
+}
+
+50%{
+    transform: translateY(-150px) scaleX(5);
+    /* opacity: .2; */
+}
+95%{
+    opacity: 0;
+}
+100%{
+    transform: translateY(-300px) scaleX(10);
+}
+    
+}
